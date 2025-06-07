@@ -37,7 +37,7 @@ async def webhook(request: Request):
 # Установка webhook при запуску
 @app.on_event("startup")
 async def on_startup():
-    webhook_url = f"https://{os.getenv('RENDER_EXTERNAL_HOST', 'your-app-name.onrender.com')}/webhook"
+    webhook_url = f"https://{os.getenv('RENDER_EXTERNAL_HOST', 'shefhaikbot.onrender.com')}/webhook"
     await bot.set_webhook(url=webhook_url)
     print(f"Webhook встановлено: {webhook_url}")
 
